@@ -48,13 +48,8 @@ button.forward:before {
 			<a href="#"><img src="img/form header_1000_min.png" style="width:100%;"alt=""></a>
 		</figure>
 		<div id="wizard_container" style="padding:40px 20px">
-			<!--<div id="top-wizard">
-				<div id="progressbar"></div>
-			</div> -->
-			<!-- /top-wizard -->
 			<form name="example-1" id="wrapped" method="POST">
 				<input id="website" name="website" type="text" value="">
-				<!-- Leave for security protection, read docs for details -->
 				<div id="middle-wizard">
 
 					<div class="step">
@@ -67,25 +62,16 @@ button.forward:before {
 						<div class="form-group">
 							<input type="text" id="kid_name" name="kidsName" class="form-control" placeholder="Kid's name">
 						</div>
-<!--						<div class="form-group">
-							<input type="email" name="email" class="form-control required" placeholder="Your Email">
-						</div> -->
 						<div class="form-group select">
 							<div class="styled-select">
 								<select class="required" name="telephone" id="countryCode">
 								</select>
 							</div>
-							<!-- 
-							<input type="number" name="telephone" class="form-control required" placeholder="Dial Code*">
-							 -->
 						</div>
 						<div class="form-group">
 							<input type="number" id="phone_number" name="telephone" class="form-control required mb-1" placeholder="Parent's Mobile*">
 							<label class="form-text text-muted mr-2" style="font-weight: 100;font-size: 12px;display: none;">You will get your demo class details on this</label>
 						</div>
-<!--						<div class="form-group">
-							<input type="text" name="age" class="form-control" placeholder="Kid's Grade in school">
-						</div> -->
 						<div class="form-group select">
 							<div class="styled-select">
 								<select class="required" name="kid_grade" id="kid_grade">
@@ -113,20 +99,13 @@ button.forward:before {
 								<select class="required demoBookingDateDropDown" name="">
 								</select>
 							</div>
-							<!-- 
-							<input type="number" name="telephone" class="form-control required" placeholder="Dial Code*">
-							 -->
 						</div>
 					</div>
 					<!-- /step-->
 				</div>
-				<!-- /middle-wizard -->
 				<div id="bottom-wizard">
-					<button type="button" name="backward" class="backward">Backward </button>
 					<button type="button" style="display: block;margin: auto;background:#480048;font-size:16px;" name="" class="forward submitButton" onclick="saveFormData();">Request a free Demo Class</button>
-					<button type="submit" name="process" class="submit">Book Now</button>
 				</div>
-				<!-- /bottom-wizard -->
 			</form>
 		</div>
 		<!-- /Wizard container -->
@@ -146,7 +125,7 @@ button.forward:before {
 									<h5 class="modal-title">Congratulations!</h5>
 								</div>
 								<div class="modal-body">
-									<p id="" style="text-align: left;">You've just taken the first step of your child's journey with Hello Learner. We'll be in touch shortly. Looking forward to having you and your child on our platform</p>
+									<p id="" style="text-align: left;">You've just taken the first step of your child's journey with NotchUp. We'll be in touch shortly. Looking forward to having you and your child on our platform</p>
 								</div>
 								<div class="modal-footer">
 									<a href="/allcourses" style="margin: auto;">Explore our all courses</a>
@@ -163,30 +142,6 @@ button.forward:before {
 		</table>
 	</div>
 
-	<!-- Modal terms -->
-	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				</div>
-				<div class="modal-body">
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn_1" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
-	
-
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/main.js"></script>
@@ -201,16 +156,5 @@ button.forward:before {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="js/firebase_custom.js"></script>
 	<script src="js/form_nativeV1.1.js"></script>
-
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1980369,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
 </body>
 </html>
