@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "notchup-f203d",
+    "default": "notchup-f203d"
+  }
+}
