@@ -1,7 +1,10 @@
 import * as functions from 'firebase-functions';
 const helper = require("./common/helper");
+import { setHeaders } from './auth/onRequest';
 
 export const demoSlotData = functions.https.onRequest(async (request, response) => {
+    await setHeaders(request, response)
+
 	 const result:any = {}    
     try {
         const options = {

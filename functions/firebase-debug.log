@@ -1,106 +1,39 @@
-[debug] [2020-09-12T18:37:29.822Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:37:29.823Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase functions:shell
-[debug] [2020-09-12T18:37:29.823Z] CLI Version:   7.6.2
-[debug] [2020-09-12T18:37:29.824Z] Platform:      darwin
-[debug] [2020-09-12T18:37:29.824Z] Node Version:  v14.4.0
-[debug] [2020-09-12T18:37:29.825Z] Time:          Sun Sep 13 2020 00:07:29 GMT+0530 (India Standard Time)
-[debug] [2020-09-12T18:37:29.825Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:37:29.825Z] 
-[debug] [2020-09-12T18:37:29.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-09-12T18:37:29.838Z] > authorizing via signed-in user
-[debug] [2020-09-12T18:37:29.838Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
-[debug] [2020-09-12T18:37:29.839Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-09-12T18:37:29.840Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-09-12T18:37:33.047Z] <<< HTTP RESPONSE 200
-[debug] [2020-09-12T18:37:33.063Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
+[debug] [2020-09-12T19:19:19.688Z] ----------------------------------------------------------------------
+[debug] [2020-09-12T19:19:19.689Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-09-12T19:19:19.689Z] CLI Version:   7.6.2
+[debug] [2020-09-12T19:19:19.689Z] Platform:      darwin
+[debug] [2020-09-12T19:19:19.689Z] Node Version:  v14.4.0
+[debug] [2020-09-12T19:19:19.690Z] Time:          Sun Sep 13 2020 00:49:19 GMT+0530 (India Standard Time)
+[debug] [2020-09-12T19:19:19.690Z] ----------------------------------------------------------------------
+[debug] [2020-09-12T19:19:19.690Z] 
+[debug] [2020-09-12T19:19:19.699Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-12T19:19:19.699Z] > authorizing via signed-in user
+[debug] [2020-09-12T19:19:19.700Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
+[debug] [2020-09-12T19:19:19.701Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
 
-[debug] [2020-09-12T18:37:35.309Z] <<< HTTP RESPONSE 200
-[warn] ⚠  Your requested "node" version "8" doesn't match your global version "14"
-[info] ✔  functions: Emulator started at http://localhost:5000
-[debug] [2020-09-12T18:37:35.586Z] [functions] Watching "/Users/saurabhgoyal/Documents/NotchUp/functions" for Cloud Functions...
-[debug] [2020-09-12T18:37:35.597Z] DEBUG: [worker-~diagnostic~-4939d8e3-4e77-400a-a064-e310b95f7a50]: BUSY
-[debug] [2020-09-12T18:37:35.789Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/saurabhgoyal/Documents/NotchUp/functions","node_version":"14.4.0"}
-[info] >  (node:67229) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
-[info] >  (Use `node --trace-warnings ...` to show where the warning was created)
-[debug] [2020-09-12T18:37:35.791Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-09-12T18:37:35.793Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-09-12T18:37:35.793Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-09-12T18:37:35.794Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-09-12T18:37:35.871Z] [functions[demoSlotData]] http function initialized (http://localhost:5000/notchup-f203d/us-central1/demoSlotData).
-[info] i  functions: Loaded functions: demoSlotData
-[debug] [2020-09-12T18:37:35.886Z] DEBUG: [worker-~diagnostic~-4939d8e3-4e77-400a-a064-e310b95f7a50]: exited
-[debug] [2020-09-12T18:37:35.886Z] DEBUG: [worker-~diagnostic~-4939d8e3-4e77-400a-a064-e310b95f7a50]: FINISHED
-[debug] [2020-09-12T18:41:24.695Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:41:24.697Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase serve
-[debug] [2020-09-12T18:41:24.697Z] CLI Version:   7.6.2
-[debug] [2020-09-12T18:41:24.697Z] Platform:      darwin
-[debug] [2020-09-12T18:41:24.697Z] Node Version:  v14.4.0
-[debug] [2020-09-12T18:41:24.698Z] Time:          Sun Sep 13 2020 00:11:24 GMT+0530 (India Standard Time)
-[debug] [2020-09-12T18:41:24.698Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:41:24.698Z] 
-[debug] [2020-09-12T18:41:24.706Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-09-12T18:41:24.706Z] > authorizing via signed-in user
-[debug] [2020-09-12T18:41:24.707Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
-[debug] [2020-09-12T18:41:24.708Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
-
-[debug] [2020-09-12T18:41:29.837Z] <<< HTTP RESPONSE 200
-[debug] [2020-09-12T18:41:29.849Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d  
+[debug] [2020-09-12T19:19:22.484Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-12T19:19:22.489Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d  
  
-[debug] [2020-09-12T18:41:39.114Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-12T19:19:23.157Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/Users/saurabhgoyal/Documents/NotchUp'...
 [info] 
-[debug] [2020-09-12T18:41:39.118Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d/webApps/-/config  
+[debug] [2020-09-12T19:19:23.161Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d/webApps/-/config  
  
 [warn] ⚠  Your requested "node" version "8" doesn't match your global version "14"
 [info] ✔  functions: Emulator started at http://localhost:5001
-[debug] [2020-09-12T18:41:58.845Z] Error: socket hang up
-    at connResetException (internal/errors.js:614:14)
-    at TLSSocket.socketOnEnd (_http_client.js:491:23)
-    at TLSSocket.emit (events.js:327:22)
-    at TLSSocket.EventEmitter.emit (domain.js:485:12)
-    at endReadableNT (_stream_readable.js:1224:12)
-    at processTicksAndRejections (internal/process/task_queues.js:84:21)
-[error] 
-[error] Error: Server Error. socket hang up
-[debug] [2020-09-12T18:47:22.833Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:47:22.835Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase serve
-[debug] [2020-09-12T18:47:22.835Z] CLI Version:   7.6.2
-[debug] [2020-09-12T18:47:22.835Z] Platform:      darwin
-[debug] [2020-09-12T18:47:22.835Z] Node Version:  v14.4.0
-[debug] [2020-09-12T18:47:22.835Z] Time:          Sun Sep 13 2020 00:17:22 GMT+0530 (India Standard Time)
-[debug] [2020-09-12T18:47:22.836Z] ----------------------------------------------------------------------
-[debug] [2020-09-12T18:47:22.836Z] 
-[debug] [2020-09-12T18:47:22.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-09-12T18:47:22.849Z] > authorizing via signed-in user
-[debug] [2020-09-12T18:47:22.849Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
-[debug] [2020-09-12T18:47:22.850Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
-
-[debug] [2020-09-12T18:47:24.878Z] <<< HTTP RESPONSE 200
-[debug] [2020-09-12T18:47:24.881Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d  
- 
-[debug] [2020-09-12T18:47:25.525Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/Users/saurabhgoyal/Documents/NotchUp'...
-[info] 
-[debug] [2020-09-12T18:47:25.528Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d/webApps/-/config  
- 
-[warn] ⚠  Your requested "node" version "8" doesn't match your global version "14"
-[info] ✔  functions: Emulator started at http://localhost:5001
-[debug] [2020-09-12T18:47:27.007Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-12T19:19:24.550Z] <<< HTTP RESPONSE 200
 [info] i  functions: Watching "/Users/saurabhgoyal/Documents/NotchUp/functions" for Cloud Functions...
-[debug] [2020-09-12T18:47:27.031Z] [worker-~diagnostic~-2e04c4f8-6889-44f2-8415-74fac36ca153]: BUSY
-[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2020-09-12T19:19:24.578Z] [worker-~diagnostic~-d0866c5b-cd31-436e-9b9e-c459906df2bb]: BUSY
 [info] i  hosting: Serving hosting files from: public
-[info] ✔  hosting: Local server: http://localhost:5005
-[debug] [2020-09-12T18:47:27.232Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/saurabhgoyal/Documents/NotchUp/functions","node_version":"14.4.0"}
-[info] >  (node:73710) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-09-12T19:19:24.813Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/saurabhgoyal/Documents/NotchUp/functions","node_version":"14.4.0"}
+[info] >  (node:93862) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
 [info] >  (Use `node --trace-warnings ...` to show where the warning was created)
-[debug] [2020-09-12T18:47:27.234Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2020-09-12T18:47:27.236Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2020-09-12T18:47:27.237Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2020-09-12T18:47:27.238Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-09-12T19:19:24.814Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-12T19:19:24.817Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-09-12T19:19:24.819Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-09-12T19:19:24.820Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
 [info] ✔  functions[demoSlotData]: http function initialized (http://localhost:5001/notchup-f203d/us-central1/demoSlotData).
-[debug] [2020-09-12T18:47:27.325Z] [worker-~diagnostic~-2e04c4f8-6889-44f2-8415-74fac36ca153]: exited
-[debug] [2020-09-12T18:47:27.326Z] [worker-~diagnostic~-2e04c4f8-6889-44f2-8415-74fac36ca153]: FINISHED
+[debug] [2020-09-12T19:19:24.904Z] [worker-~diagnostic~-d0866c5b-cd31-436e-9b9e-c459906df2bb]: exited
+[debug] [2020-09-12T19:19:24.904Z] [worker-~diagnostic~-d0866c5b-cd31-436e-9b9e-c459906df2bb]: FINISHED
