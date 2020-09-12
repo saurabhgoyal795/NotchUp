@@ -1,0 +1,104 @@
+[debug] [2020-09-11T17:37:56.415Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:37:56.416Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-09-11T17:37:56.417Z] CLI Version:   7.6.2
+[debug] [2020-09-11T17:37:56.417Z] Platform:      darwin
+[debug] [2020-09-11T17:37:56.417Z] Node Version:  v14.4.0
+[debug] [2020-09-11T17:37:56.417Z] Time:          Fri Sep 11 2020 23:07:56 GMT+0530 (India Standard Time)
+[debug] [2020-09-11T17:37:56.417Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:37:56.417Z] 
+[debug] [2020-09-11T17:37:56.426Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-11T17:37:56.427Z] > authorizing via signed-in user
+[debug] [2020-09-11T17:37:56.427Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
+[debug] [2020-09-11T17:37:56.428Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
+
+[debug] [2020-09-11T17:37:58.270Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-11T17:37:58.272Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d  
+ 
+[debug] [2020-09-11T17:37:58.922Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/saurabhgoyal/Documents/NotchUp'...
+[info] 
+[debug] [2020-09-11T17:37:58.924Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "14"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-09-11T17:38:00.116Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/saurabhgoyal/Documents/NotchUp/functions" for Cloud Functions...
+[debug] [2020-09-11T17:38:00.149Z] [worker-~diagnostic~-09c6e647-6fc5-4765-bb9c-27414cbec3a8]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-09-11T17:38:00.352Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/saurabhgoyal/Documents/NotchUp/functions","node_version":"14.4.0"}
+[info] >  (node:91051) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+[info] >  (Use `node --trace-warnings ...` to show where the warning was created)
+[debug] [2020-09-11T17:38:00.354Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-11T17:38:00.358Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-09-11T17:38:00.360Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-09-11T17:38:00.361Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module '/Users/saurabhgoyal/Documents/NotchUp/functions/lib/index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:328:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:689:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1016:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:898:27)
+    at Module.require (internal/modules/cjs/loader.js:1089:19)
+    at require (internal/modules/cjs/helpers.js:73:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:709:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-09-11T17:38:00.423Z] [worker-~diagnostic~-09c6e647-6fc5-4765-bb9c-27414cbec3a8]: exited
+[debug] [2020-09-11T17:38:00.423Z] [worker-~diagnostic~-09c6e647-6fc5-4765-bb9c-27414cbec3a8]: FINISHED
+[debug] [2020-09-11T17:39:46.310Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:39:46.312Z] Command:       /usr/local/Cellar/node/14.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2020-09-11T17:39:46.312Z] CLI Version:   7.6.2
+[debug] [2020-09-11T17:39:46.312Z] Platform:      darwin
+[debug] [2020-09-11T17:39:46.312Z] Node Version:  v14.4.0
+[debug] [2020-09-11T17:39:46.313Z] Time:          Fri Sep 11 2020 23:09:46 GMT+0530 (India Standard Time)
+[debug] [2020-09-11T17:39:46.313Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:39:46.313Z] 
+[debug] [2020-09-11T17:39:46.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-11T17:39:46.322Z] > authorizing via signed-in user
+[debug] [2020-09-11T17:39:46.322Z] [iam] checking project notchup-f203d for permissions ["firebase.projects.get"]
+[debug] [2020-09-11T17:39:46.323Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/notchup-f203d:testIamPermissions  
+
+[debug] [2020-09-11T17:39:47.923Z] <<< HTTP RESPONSE 200
+[debug] [2020-09-11T17:39:47.926Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d  
+ 
+[debug] [2020-09-11T17:39:48.389Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/saurabhgoyal/Documents/NotchUp'...
+[info] 
+[debug] [2020-09-11T17:39:48.393Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/notchup-f203d/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "14"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2020-09-11T17:39:49.621Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/saurabhgoyal/Documents/NotchUp/functions" for Cloud Functions...
+[debug] [2020-09-11T17:39:49.644Z] [worker-~diagnostic~-498364fc-bace-4558-b788-dc4f3c616884]: BUSY
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-09-11T17:39:49.841Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/saurabhgoyal/Documents/NotchUp/functions","node_version":"14.4.0"}
+[info] >  (node:92384) Warning: Accessing non-existent property 'padLevels' of module exports inside circular dependency
+[info] >  (Use `node --trace-warnings ...` to show where the warning was created)
+[debug] [2020-09-11T17:39:49.843Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2020-09-11T17:39:49.846Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.13.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-09-11T17:39:49.847Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-09-11T17:39:49.847Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"/Users/saurabhgoyal/Documents/NotchUp/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Cannot find module '/Users/saurabhgoyal/Documents/NotchUp/functions/lib/index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:328:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:689:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1016:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:898:27)
+    at Module.require (internal/modules/cjs/loader.js:1089:19)
+    at require (internal/modules/cjs/helpers.js:73:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:709:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[warn] ⚠  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-09-11T17:39:49.908Z] [worker-~diagnostic~-498364fc-bace-4558-b788-dc4f3c616884]: exited
+[debug] [2020-09-11T17:39:49.908Z] [worker-~diagnostic~-498364fc-bace-4558-b788-dc4f3c616884]: FINISHED
