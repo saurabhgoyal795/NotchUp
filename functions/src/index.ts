@@ -17,7 +17,6 @@ export const getAllUserForParticularEmail = functions.https.onRequest(async (req
     for (const blockId of peopleIBlocked.docs){
       blockedArray.push(blockId.id)
     }
-    console.log(blockedArray);
     for (const studentDocs of snapshot.docs){
       let flag = true
       for (const blockId of blockedArray) {
