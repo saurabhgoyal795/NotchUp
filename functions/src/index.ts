@@ -1,36 +1,34 @@
 import * as functions from 'firebase-functions';
-const helper = require("./common/helper");
-import { setHeaders } from './auth/onRequest';
-import { db } from "./admin/admin";
+import { db , messaging} from "./admin/admin";
 const jwt = require("jsonwebtoken")
-export const demoSlotData = functions.https.onRequest(async (request, response) => {
-    await setHeaders(request, response)
-
-	 const result:any = {}    
-    try {
-        const options = {
-            "method": "GET",
-            "hostname":"script.googleusercontent.com",
-            "path": "/macros/echo?user_content_key=y5DqCFPE_-DOnIaYbfXwEZRY5YbCi_o8HLP4oSnj86Br6D1S09FlnICTKTAqsrxi90uLNEDY4DIhb0fjXcJm3Gqp_wL3PYxJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnC09Nb0QZ6ca_LU0vmo6mSiQ7SyFG3CgdL9-1Vgcha-TAYaAGhh-9xNG-9rMNEZHQRElvdDletx0&lib=MlJcTt87ug5f_XmzO-tnIbN3yFe7Nfhi6"
-          };
-          const getOptions: any = {}
-          getOptions['options'] = options
-          const data = await helper.httpsRequestPromise(getOptions,'GET')
-          result['success'] = JSON.parse(data)
-    } catch (error) {
-        result['error'] = error
-    }
- response.send(result);
-});
-
 
 export const getAllUserForParticularEmail = functions.https.onRequest(async (request, response) => {
   const result:any = {}   
   try {
+    const email: any = request.query.email
+    if (email=== undefined){
+      throw new Error("Email cannot be null")      
+    }
     const studentArray : any = []
+    const blockedArray : any = []
+
     const snapshot = await db.collection('userCollection').get()
+    const peopleIBlocked = await db.collection('userCollection').doc(email).collection("IBlocked").get()
+    for (const blockId of peopleIBlocked.docs){
+      blockedArray.push(blockId.id)
+    }
+    console.log(blockedArray);
     for (const studentDocs of snapshot.docs){
-      studentArray.push(studentDocs.data())
+      let flag = true
+      for (const blockId of blockedArray) {
+        if (blockId === studentDocs.id){
+          flag = false
+          break
+        }
+      }
+      if(flag){
+        studentArray.push(studentDocs.data())
+      }
     }
     result['success'] = studentArray
 
@@ -54,7 +52,6 @@ export const login = functions.https.onRequest(async (request, response) => {
     }
     if(snapshot.data()!.password === request.query.password) {
       await jwt.verify(snapshot.data()!.token,  "secretkey", async (err: any, data: any) => {
-        console.log("data", data)
         if (err === undefined){
           result['error'] = "auth failed"
         } else {
@@ -83,10 +80,9 @@ export const signup = functions.https.onRequest(async (request, response) => {
     if(snapshot.exists){
       throw new Error("Email already exist")
     }
-     await jwt.sign({user: email}, "secretkey", async (err: any, token: any) => {
-       console.log(token)
-        await db.collection('userCollection').doc(email).set({email: email, password: password, image: request.query.image, name: request.query.name, token: token})
-      })
+    await jwt.sign({user: email}, "secretkey", async (err: any, token: any) => {
+      await db.collection('userCollection').doc(email).set({email: email, password: password, image: request.query.image, name: request.query.name, token: token}, {merge: true})
+    })
     result['success'] = "signup successfull"
 
   } catch (error) {
@@ -94,5 +90,63 @@ export const signup = functions.https.onRequest(async (request, response) => {
   }
   response.send(result);
 });
+
+
+export const sendNotificationToLiked = functions.https.onRequest(async (request, response) => {
+  const result:any = {}   
+  try {
+    const email: any = request.query.email
+    const userEmail: any = request.query.userEmail
+    let userName: any = request.query.userName
+    if (email === undefined  || userEmail === undefined) {
+      throw new Error("email cannot be null")      
+    }
+    let name: any = email
+    const snapshot = await db.collection('userCollection').doc(email).get()
+    if(snapshot.exists){
+      throw new Error("Email already exist")
+    }
+    if (snapshot.data()!.name !== undefined){
+      name = userEmail
+    }
+    await db.collection('userCollection').doc(email).collection("Iliked").doc(userEmail).set({email: userEmail, name: userName}, {merge: true})
+    await db.collection('userCollection').doc(userEmail).collection("likedMe").doc(email).set({email: email, name: name}, {merge: true})    
+    const gcmId = snapshot.data()!.gcmId
+    if(gcmId !== undefined) {
+      const payload = {
+        notification: {
+          title: name +' has liked your photo',
+          body: 'Tap here to check it out!'
+        }
+      };
+      const notificationResult = await messaging.sendToDevice(gcmId, payload)
+      result['notificationResult'] = notificationResult
+    }
+    result['success'] = "dataSavedSuccessfully"
+
+  } catch (error) {
+    result['error'] = error
+  }
+  response.send(result);
+});
+
+export const blockUser = functions.https.onRequest(async (request, response) => {
+  const result:any = {}   
+  try {
+    const email: any = request.query.email
+    const userEmail: any = request.query.userEmail
+    if (email === undefined || userEmail === undefined) {
+      throw new Error("email or password cannot be null")      
+    }
+    await db.collection('userCollection').doc(email).collection("IBlocked").doc(userEmail).set({email: userEmail}, {merge: true})
+    await db.collection('userCollection').doc(userEmail).collection("blockedMe").doc(email).set({email: email}, {merge: true})
+    result['success'] = "successfully blocked"
+
+  } catch (error) {
+    result['error'] = error
+  }
+  response.send(result);
+});
+
 
 
